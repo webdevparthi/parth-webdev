@@ -57,7 +57,7 @@ p{
   gap: 5px;
 }
 
-.skills-list p,.timeline p,.timeline .date{
+.skills-list p,.projects li,.timeline p,.timeline .date{
   font-size: 14px;
   color: #888;
 }
