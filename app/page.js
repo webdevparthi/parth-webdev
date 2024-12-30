@@ -23,7 +23,7 @@ export default function Hage() {
             <div className="row">
               <div className="col-lg-3 col-12">
                 <Image
-                  src="/profile.png"
+                  src="/profile.jpeg"
                   width={150}
                   height={150}
                   alt="profile-image"
