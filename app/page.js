@@ -14,6 +14,38 @@ import {
   tools
 } from './lib/databse';
 
+export async function generateMetadata(parent) {
+
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: "Parthiban Ramachandran Portfolio",
+    description: "I’m Parthiban Ramachandran, an experienced Web Developer with 2 years of hands-on experience building responsive and dynamic web applications using HTML, CSS, Bootstrap, JavaScript, React.js, and Next.js.",
+    openGraph: {
+      siteName: "Parthiban Ramachandran", // Add your site name here
+      url: 'https://parthi-webdev.vercel.app', // Add your website URL here
+      images: [
+        {
+          url: "https://avatars.githubusercontent.com/u/100289747?v=4",
+          width: 1200,  // common recommended width
+          height: 630   // common recommended height
+        },
+        ...previousImages
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image', // Twitter card type
+      title: "Parthiban Ramachandran Portfolio",
+      description: "I’m Parthiban Ramachandran, an experienced Web Developer with 2 years of hands-on experience building responsive and dynamic web applications using HTML, CSS, Bootstrap, JavaScript, React.js, and Next.js.",
+      image: {
+        url: "https://avatars.githubusercontent.com/u/100289747?v=4",
+        width: 1200,  // common recommended width
+        height: 630   // common recommended height
+      },
+    }
+  }
+}
+
 export default function Hage() {
   return (
     <div className='container mb-5'>
